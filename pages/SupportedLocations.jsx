@@ -16,6 +16,8 @@ const SupportedLocations = () => {
 
   const [filteredCountries, setFilteredCountries] = useState([]);
 
+  const [emptySupportedCountries, setEmptySupportedCountries] = useState(false);
+
   const toggleOpenedCountries = (country) => {
     if (!openedCountries.includes(country)) {
       setOpenedCountries([...openedCountries, country]);
@@ -58,6 +60,8 @@ const SupportedLocations = () => {
 
   useEffect(() => {
     if (getSupportedData) {
+      if (getSupportedData.getSupportedCountries.length === 0)
+        setEmptySupportedCountries(true);
       setFilteredCountries(getSupportedData.getSupportedCountries);
     }
   }, [getSupportedData]);
@@ -101,17 +105,26 @@ const SupportedLocations = () => {
             </div>
           ) : (
             <>
-              {filteredCountries.length === 0 ? (
+              {emptySupportedCountries ? (
+                <>
+                  <p className={styles.noSupportedCountries}>
+                    We are not available in any countries, but we are working on
+                    expanding to many countries. Let us know where you want us
+                    to expand to, we really appreciate it.
+                  </p>
+                  <button className={styles.contactButton}>Contact Us</button>
+                </>
+              ) : filteredCountries?.length === 0 ? (
                 <>
                   <p className={styles.emptySearch}>
                     No countries for '{searchText}'
                   </p>
                 </>
               ) : (
-                filteredCountries.map((data) => (
+                filteredCountries?.map((data, index) => (
                   <div
                     className={styles.location}
-                    key={data}
+                    key={index}
                     onClick={() => toggleOpenedCountries(data.name)}
                   >
                     <div className={styles.locationHeader}>
@@ -136,8 +149,8 @@ const SupportedLocations = () => {
 
                     {isCountryOpened(data.name) && (
                       <div className={styles.locationInfo}>
-                        {data.states.map((state) => (
-                          <p key={state} className={styles.locationListName}>
+                        {data.states.map((state, index) => (
+                          <p key={index} className={styles.locationListName}>
                             • {state.name}
                           </p>
                         ))}

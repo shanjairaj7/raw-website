@@ -120,6 +120,24 @@
     opacity: .6;
 }
 
+.noSupportedCountries {
+    opacity: .8;
+    font-size: 17px;
+    width: 60%;
+    text-align: center;
+    line-height: 1.7em;
+}
+
+.contactButton {
+    border-radius: 30px;
+    padding: 12px 24px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: "Inter";
+    margin-top: 15px;
+}
+
 .downArrow {
     width: 17px;
     height: 17px;
