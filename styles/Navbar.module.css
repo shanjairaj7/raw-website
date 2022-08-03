@@ -1,0 +1,38 @@
+.navbar {
+    padding: 30px 70px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 200000;
+    background-color: rgb(15, 15, 15);
+    width: 100%;
+}
+
+.logo {
+    font-family: "Rogerex";
+    font-size: 50;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    /* width: 350px; */
+    /* background-color: red; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-left: 50px;
+}
+
+.link {
+    opacity: .9;
+    margin-right: 30px;
+    font-family: "Inter";
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.linkText {
+    cursor: pointer;
+}

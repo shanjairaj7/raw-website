@@ -1,0 +1,77 @@
+.contactUs {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    /* min-height: 80vh; */
+}
+
+.header {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.headerDescription {
+    width: 55%;
+    margin: 0 auto;
+    font-family: "Inter";
+    margin-top: 10px;
+    line-height: 1.6em;
+    opacity: .8;
+}
+
+.container {
+    width: 470px;
+    /* border: 1px solid rgb(216, 216, 216); */
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    margin-bottom: 25px;
+}
+
+.inputContainer:nth-child(3) {
+    margin-bottom: 0px;
+}
+
+.label {
+    font-family:  "Inter";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    font-family: "Inter";
+    margin-top: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: "Inter";
+    margin-top: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+    min-height: 150px;
+}
+
+.sendButton {
+    padding: 15px;
+    background-color: black;
+    border: none;
+    font-family: "Inter";
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}

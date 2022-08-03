@@ -1,0 +1,161 @@
+.supportedLocations {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 70px;
+    color: black;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.searchInput {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 10px;
+    padding-left: 20px;
+    width: 500px;
+    border-radius: 50px;
+}
+
+.searchInput:hover {
+    border: 1px solid rgb(192, 192, 192);
+
+}
+
+.searchIcon {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    background-color: black;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: "Inter";
+    width: 100%;
+    padding-right: 10px;
+}
+
+.headerText {
+    font-family: "Inter";
+    font-size: 26px;
+    letter-spacing: -0.4px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.location {
+    width: 50%;
+    padding: 20px;
+    /* padding-top: 25px; */
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.05);
+}
+
+.locationHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(206, 206, 206);
+    width: 50%;
+    margin: 25px 0;
+    margin-bottom:35px;
+}
+
+.flagIcon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.locationLeft {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    opacity: .3;
+    margin: 0px 10px;
+    border-radius: 50%;
+}
+
+.locationsCount {
+    opacity: .6;
+}
+
+.locationTitle {
+    font-size: 20px;
+}
+
+.emptySearch {
+    opacity: .6;
+}
+
+.downArrow {
+    width: 17px;
+    height: 17px;
+}
+
+.locationInfo {
+    margin-top: 25px;
+}
+
+.locationListName {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+@media all and (max-width:900px) {
+    .location {
+        width: 100%;
+    }
+}
+
+@media all and (max-width:500px) {
+    /*  */
+    .supportedLocations {
+        padding: 30px 20px;
+    }
+
+
+    .locationTitle {
+        font-size: 17px;
+    }
+
+    .locationsCount {
+        font-size: 14px;
+    }
+
+    .locationListName {
+        font-size: 16px;
+    }
+}
