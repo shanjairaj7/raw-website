@@ -34,7 +34,7 @@
 }
 
 .title {
-  font-family: "Rogerex";
+  font-family: "Rogerex" !important;
   font-weight: 900;
   letter-spacing: -0.5px;
   font-size: 43px;
@@ -45,6 +45,7 @@
 
 .greenUnderline {
   border-bottom: 5px solid #198860;
+  font-family: "Rogerex" !important;
   /* border-bottom-style:dashed; */
 }
 
@@ -346,5 +347,13 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+  }
+
+  .benefitImage {
+    width: 100%;
+  }
+
+  .benefitLeft {
+    padding-left: 0px;
   }
 }

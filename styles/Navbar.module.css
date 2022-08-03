@@ -36,3 +36,19 @@
 .linkText {
     cursor: pointer;
 }
+
+@media all and (max-width: 500px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
+        align-items: center;
+    }
+
+    .links {
+        margin-left: 0px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+}

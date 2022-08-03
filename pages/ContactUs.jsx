@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import { Navbar } from "../components/navbar";
 import styles from "../styles/ContactUs.module.css";
@@ -5,6 +6,21 @@ import styles from "../styles/ContactUs.module.css";
 const ContactUs = () => {
   return (
     <div>
+      <Head>
+        <title>
+          RAW - Single Subscription to access gyms Worldwide | Contact Us
+        </title>
+        <meta
+          name="description"
+          content="Contact RAW for any questions, inquiries or any recommendations that you have to make the product better."
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
       <Navbar />
 
       <div className={styles.contactUs}>

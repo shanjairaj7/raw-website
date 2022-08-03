@@ -75,3 +75,13 @@
     border-radius: 5px;
     margin-top: 10px;
 }
+
+@media all and (max-width:500px) {
+    .container {
+        width: 350px;
+    }
+
+    .headerDescription {
+        width: 90%;
+    }
+}
