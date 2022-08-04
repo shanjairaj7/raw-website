@@ -81,7 +81,7 @@ const SupportedLocations = () => {
           name="description"
           content="Check out the supported locations where RAW is available with Gym Locations"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/rawLogoBlack.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
@@ -94,13 +94,14 @@ const SupportedLocations = () => {
         <div className={styles.header}>
           <h1 className={styles.headerText}>Supported Locations</h1>
           <div className={styles.searchInput}>
+            <img className={styles.searchIcon} src="/searchIcon.png" />
+
             <input
               className={styles.input}
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               placeholder="Search for locations"
             />
-            <img className={styles.searchIcon} src="/searchIcon.png" />
           </div>
         </div>
 

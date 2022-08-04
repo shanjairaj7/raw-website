@@ -14,7 +14,7 @@ const ContactUs = () => {
           name="description"
           content="Contact RAW for any questions, inquiries or any recommendations that you have to make the product better."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/rawLogoBlack.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"

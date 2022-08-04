@@ -20,7 +20,7 @@
     margin-top: 20px;
     border: 1px solid rgb(209, 209, 209);
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 15px;
     width: 500px;
     border-radius: 50px;
 }
@@ -33,10 +33,10 @@
 .searchIcon {
     width: 35px;
     height: 35px;
-    margin-right: 5px;
     background-color: black;
     padding: 8px;
     border-radius: 50px;
+    margin-right: 10px;
 }
 
 .input {
