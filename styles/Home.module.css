@@ -99,6 +99,7 @@
   font-family: "Inter";
   font-weight: 600;
   margin-left: 10px;
+  color: white;
 }
 
 .supportedLocationsLink {
@@ -377,6 +378,10 @@ cursor: pointer;
 }
 
 @media all and (max-width:900px) {
+  .buttonText {
+    font-size: 15px;
+  }
+
   .benefitImage {
     width: 50%;
   }

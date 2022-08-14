@@ -5,6 +5,7 @@
     z-index: 200000;
     background-color: rgb(15, 15, 15);
     width: 100%;
+    color: white;
 }
 
 .logo {
@@ -35,6 +36,7 @@
     font-family: "Inter";
     font-size: 15px;
     cursor: pointer;
+    color: white !important;
 }
 
 .linkText {
@@ -55,4 +57,5 @@
         align-items: center;
         justify-content: center;
     }
+
 }
