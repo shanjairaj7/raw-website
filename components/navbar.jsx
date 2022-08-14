@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <Link href="/">
-        <h1 className={styles.logo}>RAW</h1>
+        <img className={styles.logo} src="/rawWhite.png" />
       </Link>
       <div className={styles.links}>
         <Link style={styles.linkText} href="/SupportedLocations">

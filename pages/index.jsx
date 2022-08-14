@@ -175,7 +175,7 @@ export default function Home() {
 
       <div className={styles.footerContainer}>
         <div className={styles.footerLeft}>
-          <h1 className={styles.footerLogo}>RAW</h1>
+          <img className={styles.logo} src="/rawblacktext.png" />
           <p className={styles.footerDescription}>
             Copyright 2022. All rights reserved
           </p>

@@ -15,6 +15,10 @@
   overflow: hidden;
 }
 
+.logo {
+  width: 80px;
+}
+
 .headerContainer {
   color: white;
   /* background-color: red; */
@@ -410,6 +414,14 @@ cursor: pointer;
 }
 
 @media all and (max-width:500px) {
+  .header { 
+    padding: 0px 30px;
+  }
+
+.benefitsContainer {
+  padding: 20px 40px;
+}
+
   .buttons {
     flex-direction: column;
   }
