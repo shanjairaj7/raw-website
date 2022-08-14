@@ -88,6 +88,8 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  background-color: white;
+  color: black;
 }
 
 .buttons {
@@ -99,7 +101,6 @@
   font-family: "Inter";
   font-weight: 600;
   margin-left: 10px;
-  color: white;
 }
 
 .supportedLocationsLink {
