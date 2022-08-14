@@ -5,6 +5,15 @@ import { Navbar } from "../components/navbar";
 import { GET_SUPPORTED_COUNTRIES } from "../graphql/queries";
 import styles from "../styles/SupportedLocations.module.css";
 
+const locations = [
+  {
+    name: "Dubai",
+    image: "/dubaiImage.jpeg",
+    comingSoon: true,
+    shortForm: "ae",
+  },
+];
+
 const SupportedLocations = () => {
   const {
     data: getSupportedData,
@@ -14,9 +23,9 @@ const SupportedLocations = () => {
 
   const [openedCountries, setOpenedCountries] = useState([]);
 
-  const [filteredCountries, setFilteredCountries] = useState([]);
+  const [filteredCountries, setFilteredCountries] = useState(locations);
 
-  const [emptySupportedCountries, setEmptySupportedCountries] = useState(false);
+  const [emptySupportedCountries, setEmptySupportedCountries] = useState(true);
 
   const toggleOpenedCountries = (country) => {
     if (!openedCountries.includes(country)) {
@@ -47,13 +56,23 @@ const SupportedLocations = () => {
   const [searchText, setSearchText] = useState("");
 
   const filterArray = () => {
-    var filteredArray = getSupportedData?.getSupportedCountries?.filter(
-      (data) => {
-        return data.name.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
-      }
-    );
+    // var filteredArray = getSupportedData?.getSupportedCountries?.filter(
+    //   (data) => {
+    //     return data.name.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
+    //   }
+    // );
+
+    var filteredArray = locations?.filter((data) => {
+      return (
+        data.name.toLowerCase().indexOf(searchText.toLowerCase().trim()) >= 0
+      );
+    });
 
     setFilteredCountries(filteredArray);
+
+    if (searchText === "") {
+      setFilteredCountries(locations);
+    }
 
     // return filteredArray;
   };
@@ -62,7 +81,7 @@ const SupportedLocations = () => {
     if (getSupportedData) {
       if (getSupportedData.getSupportedCountries.length === 0)
         setEmptySupportedCountries(true);
-      setFilteredCountries(getSupportedData.getSupportedCountries);
+      // setFilteredCountries(getSupportedData.getSupportedCountries);
     }
   }, [getSupportedData]);
 
@@ -105,14 +124,17 @@ const SupportedLocations = () => {
           </div>
         </div>
 
-        <div className={styles.locations}>
-          {getSupportedLoading ? (
+        {filteredCountries.length === 0 ? (
+          <p className={styles.emptySearch}>No countries for '{searchText}'</p>
+        ) : (
+          <div className={styles.locations}>
+            {/* {getSupportedLoading ? (
             <div>
               <h1>Loading...</h1>
             </div>
-          ) : (
+          ) : ( */}
             <>
-              {emptySupportedCountries ? (
+              {/* {emptySupportedCountries ? (
                 <>
                   <p className={styles.noSupportedCountries}>
                     We are not available in any countries, but we are working on
@@ -167,7 +189,53 @@ const SupportedLocations = () => {
                     )}
                   </div>
                 ))
-              )}
+              )} */}
+
+              {filteredCountries.map((location) => (
+                <div
+                  key={location.name}
+                  className={styles.location}
+                  // key={index}
+                  onClick={() => toggleOpenedCountries("ae")}
+                >
+                  <div className={styles.locationHeader}>
+                    <img
+                      src={location.image}
+                      className={styles.locationImage}
+                    />
+
+                    <div className={styles.locationLeft}>
+                      <img
+                        className={styles.flagIcon}
+                        src={`https://countryflagsapi.com/png/${location.shortForm}`}
+                      />
+                      <div className={styles.textContent}>
+                        <h1 className={styles.locationTitle}>
+                          {location.name}
+                        </h1>
+                        {/* <div className={styles.circle}></div>
+                      <p className={styles.locationsCount}>0 Locations</p> */}
+                      </div>
+                    </div>
+                    <div className={styles.locationRight}>
+                      {/* <img className={styles.downArrow} src="/downArrow.png" /> */}
+                      <p className={styles.comingSoonText}>
+                        {location.comingSoon && "Coming Soon"}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* {isCountryOpened("ae") && ( */}
+                  {/* <div className={styles.locationInfo}> */}
+                  {/* {data.states.map((state, index) => (
+                      <p key={index} className={styles.locationListName}>
+                        • {state.name}
+                      </p>
+                    ))} */}
+                  {/* </div> */}
+                  {/* )} */}
+                </div>
+              ))}
 
               {/* <div className={styles.line}></div> */}
 
@@ -219,8 +287,9 @@ const SupportedLocations = () => {
                 </div>
               </div> */}
             </>
-          )}
-        </div>
+            {/* )} */}
+          </div>
+        )}
       </div>
     </div>
   );

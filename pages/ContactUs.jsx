@@ -1,9 +1,56 @@
+import { useMutation } from "@apollo/client";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/navbar";
+import { CONTACT_US } from "../graphql/mutations";
 import styles from "../styles/ContactUs.module.css";
 
 const ContactUs = () => {
+  const [
+    contactUs,
+    { data: contactUsData, loading: contactUsLoading, error: contactUsError },
+  ] = useMutation(CONTACT_US);
+
+  const [disableButton, setDisableButton] = useState(true);
+  const [showThanks, setShowThanks] = useState(false);
+
+  const contactUsFunction = () => {
+    contactUs({
+      variables: {
+        input: {
+          email: input.email,
+          description: input.description,
+          subject: `RAW Contact`,
+        },
+      },
+    }).then(() => {
+      setShowThanks(true);
+
+      setTimeout(() => {
+        setShowThanks(false);
+      }, 3000);
+    });
+  };
+
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    description: "",
+  });
+
+  const changeInput = (key, value) => {
+    setInput({
+      ...input,
+      [key]: value,
+    });
+  };
+
+  useEffect(() => {
+    if (input.name === "" || input.email === "" || input.description === "") {
+      setDisableButton(true);
+    } else setDisableButton(false);
+  }, [input]);
+
   return (
     <div>
       <Head>
@@ -32,27 +79,63 @@ const ContactUs = () => {
           </p>
         </div>
 
-        <div className={styles.container}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            contactUsFunction();
+          }}
+          className={styles.container}
+        >
           <div className={styles.inputContainer}>
             <p className={styles.label}>Name</p>
-            <input className={styles.input} placeholder="Enter your name" />
+            <input
+              value={input.name}
+              onChange={(e) => changeInput("name", e.target.value)}
+              className={styles.input}
+              placeholder="Enter your name"
+            />
           </div>
 
           <div className={styles.inputContainer}>
             <p className={styles.label}>Email</p>
-            <input className={styles.input} placeholder="Enter your email" />
+            <input
+              value={input.email}
+              onChange={(e) => changeInput("email", e.target.value)}
+              className={styles.input}
+              placeholder="Enter your email"
+            />
           </div>
 
           <div className={styles.inputContainer}>
             <p className={styles.label}>Message</p>
             <textarea
+              value={input.description}
+              onChange={(e) => changeInput("description", e.target.value)}
               className={[styles.textarea]}
               placeholder="Enter your message"
             />
           </div>
 
-          <button className={styles.sendButton}>Send Message</button>
-        </div>
+          <button
+            type="submit"
+            onClick={() => contactUsFunction()}
+            className={
+              disableButton || contactUsLoading
+                ? styles.disableButton
+                : styles.sendButton
+            }
+            disabled={disableButton || contactUsLoading}
+          >
+            {contactUsLoading ? "Sending message..." : "Send Message"}
+          </button>
+
+          {showThanks && (
+            <p className={styles.thankYou}>
+              Thank you for your message, We will get back with a reply very
+              soon.
+            </p>
+          )}
+        </form>
       </div>
     </div>
   );

@@ -95,10 +95,29 @@ export default function Home() {
         </div>
 
         <div className={styles.benefit}>
-          <img className={styles.benefitImage} src="/demo2.png" />
+          <img className={styles.benefitImage} src="/viewGymImage.png" />
 
           <div className={styles.benefitLeft}>
             <p className={styles.label}>2</p>
+            <h1 className={styles.benefitLeftTitle}>
+              View Gym Information before you Go.
+            </h1>
+            <p className={styles.benefitLeftDescription}>
+              Get to know information about the gym before you go, to make sure
+              you don't get any sudden suprises when you reach there!
+            </p>
+            <a className={styles.linkContainer} href="#">
+              <p className={styles.linkContainerText}>Get the App ▶ </p>
+              <img className={styles.rightIcon} src="/rightIcon.png" />
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.benefit}>
+          <img className={styles.benefitImage} src="/demo2.png" />
+
+          <div className={styles.benefitLeft}>
+            <p className={styles.label}>3</p>
             <h1 className={styles.benefitLeftTitle}>
               Track your activity and reach your goals.
             </h1>
@@ -118,7 +137,7 @@ export default function Home() {
           <img className={styles.benefitImage} src="/demo3.png" />
 
           <div className={styles.benefitLeft}>
-            <p className={styles.label}>3</p>
+            <p className={styles.label}>4</p>
             <h1 className={styles.benefitLeftTitle}>
               Scan QR Code to create your activity!
             </h1>

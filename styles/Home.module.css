@@ -34,18 +34,19 @@
 }
 
 .title {
-  font-family: "Rogerex" !important;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  font-size: 43px;
+  font-family: "Inter" !important;
+  font-weight: 800;
+  letter-spacing: -0.9px;
+  font-size: 45px;
   width: 100%;
   line-height: 1.2em;
+  font-family: "Inter";
   /* font-family: "Inter"; */
 }
 
 .greenUnderline {
   border-bottom: 5px solid #198860;
-  font-family: "Rogerex" !important;
+  /* font-family: "Rogerex" !important; */
   /* border-bottom-style:dashed; */
 }
 
@@ -90,7 +91,8 @@
 }
 
 .buttonText {
-  font-family: "Plus Jakarta Sans";
+  /* font-family: "Plus Jakarta Sans"; */
+  font-family: "Inter";
   font-weight: 600;
   margin-left: 10px;
 }

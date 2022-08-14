@@ -19,7 +19,7 @@
     align-items: center;
     margin-top: 20px;
     border: 1px solid rgb(209, 209, 209);
-    padding: 10px;
+    padding: 12px 15px;
     padding-left: 15px;
     width: 500px;
     border-radius: 50px;
@@ -55,26 +55,28 @@
 }
 
 .locations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 15px;
+    /* background-color: black; */
+    width: 90%;
+    margin: 0 auto;
     margin-top: 40px;
 }
 
 .location {
-    width: 50%;
-    padding: 20px;
+    width: 100%;
+    padding: 0px 0px;
     /* padding-top: 25px; */
-    border: 1px solid rgb(217, 217, 217);
+    border: 1px solid rgb(245, 245, 245);
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0px 5px 5px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
 }
 
 .locationHeader {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
@@ -90,13 +92,19 @@
 }
 
 .flagIcon {
-    height: 20px;
-    margin-right: 10px;
+    height: 30px;
+    /* margin-right: 10px; */
 }
 
 .locationLeft {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-top: 20px;
+}
+
+.locationRight {
+    padding-bottom: 20px;
 }
 
 .circle {
@@ -118,6 +126,7 @@
 
 .emptySearch {
     opacity: .6;
+    text-align: center;
 }
 
 .noSupportedCountries {
@@ -147,6 +156,12 @@
     margin-top: 25px;
 }
 
+.locationImage {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .locationListName {
     margin-bottom: 15px;
     font-size: 18px;
@@ -155,17 +170,36 @@
 .textContent {
     display: flex;
     align-items: center;
+    padding: 20px 0;
+}
+
+.comingSoonText {
+    font-family: "Inter";
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #19885f2e;
+    padding: 5px;
+    color: #19885f;
+    border-radius: 5px;
 }
 
 @media all and (max-width:900px) {
     .location {
         width: 100%;
     }
+
+    .locations {
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 @media all and (max-width:500px) {
     .searchInput {
         width: 350px;
+    }
+
+    .locations {
+        grid-template-columns: repeat(1,1fr);
     }
 
     /*  */
