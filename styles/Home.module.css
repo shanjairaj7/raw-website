@@ -206,6 +206,56 @@
   padding-bottom: 5px;
 }
 
+.footerCallToAction {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+  background-color: rgb(22, 22, 22);
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+
+.downloadImage {
+  width: 22%;
+  margin-top: 20px;
+margin-right: 20px;
+cursor: pointer;
+}
+
+.footerContent {
+  padding: 80px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center; 
+  margin: 0 auto;
+}
+
+.footerContentDescription {
+  padding-top: 20px;
+  line-height: 1.6em;
+  font-size: 18px;
+  opacity: .8;
+}
+
+.footerTitle {
+  font-family: "Inter";
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  width: 90%;
+  line-height: 1.2em;
+}
+
+.footerImage {
+  width: 100%;
+  border-radius: 70px;
+}
+
 .footerContainer {
   display: flex;
   justify-content: space-between;
@@ -250,6 +300,18 @@
 }
 
 @media all and (max-width:1200px) {
+  .footerCallToAction {
+    border-radius: 0px;
+  }
+
+  .footerContent {
+    width: 85%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: initial;
+    margin: 0;
+  }
+
   .headerContainer {
     display: flex;
     flex-direction: column;
@@ -315,6 +377,19 @@
     width: 50%;
   }
 
+  .footerTitle {
+    font-size: 32px;
+  }
+
+  .footerContent {
+    width: 100%;
+    padding: 60px 40px;
+  }
+
+  .downloadImage {
+    width: 30%;
+  }
+
   .benefitLeftTitle {
     width: 100%;
   }
@@ -337,6 +412,10 @@
 @media all and (max-width:500px) {
   .buttons {
     flex-direction: column;
+  }
+
+  .downloadImage {
+    width: 50%;
   }
 
   .androidDownloadButton {

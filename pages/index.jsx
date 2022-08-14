@@ -153,6 +153,26 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={styles.footerCallToAction}>
+        {/* <img className={styles.footerImage} src="/endFooter.png" /> */}
+
+        <div className={styles.footerContent}>
+          <h1 className={styles.footerTitle}>
+            Get access to Gyms worldwide with a Single Subscription.
+          </h1>
+          <p className={styles.footerContentDescription}>
+            Get access to high quality gyms all around the world with a single
+            subscription, track your fitness progress and reach your fitness
+            goals.
+          </p>
+
+          <div>
+            <img className={styles.downloadImage} src="/downloadAppStore.png" />
+            <img className={styles.downloadImage} src="/googlePlayStore.png" />
+          </div>
+        </div>
+      </div>
+
       <div className={styles.footerContainer}>
         <div className={styles.footerLeft}>
           <h1 className={styles.footerLogo}>RAW</h1>
