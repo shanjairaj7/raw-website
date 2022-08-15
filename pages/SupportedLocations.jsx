@@ -291,6 +291,33 @@ const SupportedLocations = () => {
           </div>
         )}
       </div>
+
+      <div className={styles.footerContainer}>
+        <div className={styles.footerLeft}>
+          <img className={styles.logo} src="/rawblacktext.png" />
+          <p className={styles.footerDescription}>
+            Copyright 2022. All rights reserved
+          </p>
+        </div>
+
+        <div className={styles.footerRight}>
+          <h1 className={styles.footerRightText}>Social Media</h1>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/getrawapp"
+          >
+            <img className={styles.socialMediaIcon} src="/twitter.jpeg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/raw_app/"
+          >
+            <img className={styles.socialMediaIcon} src="/instagramLogo.svg" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

@@ -183,8 +183,20 @@ export default function Home() {
 
         <div className={styles.footerRight}>
           <h1 className={styles.footerRightText}>Social Media</h1>
-          <img className={styles.socialMediaIcon} src="/twitter.jpeg" />
-          <img className={styles.socialMediaIcon} src="/instagramLogo.svg" />
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/getrawapp"
+          >
+            <img className={styles.socialMediaIcon} src="/twitter.jpeg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/raw_app/"
+          >
+            <img className={styles.socialMediaIcon} src="/instagramLogo.svg" />
+          </a>
         </div>
       </div>
     </div>

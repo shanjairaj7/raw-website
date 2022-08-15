@@ -234,3 +234,239 @@
         margin-top: 5px;
     }
 }
+
+
+
+.logo {
+    width: 80px;
+  }
+  
+
+
+.footerContent {
+    padding: 80px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    text-align: center; 
+    margin: 0 auto;
+  }
+  
+  .footerContentDescription {
+    padding-top: 20px;
+    line-height: 1.6em;
+    font-size: 18px;
+    opacity: .8;
+  }
+  
+  .footerTitle {
+    font-family: "Inter";
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    width: 90%;
+    line-height: 1.2em;
+  }
+  
+  .footerImage {
+    width: 100%;
+    border-radius: 70px;
+  }
+  
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 70px;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    background-color: rgb(246, 246, 246);
+    padding-top: 40px;
+  }
+   
+  .socialMediaIcon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .footerLogo {
+    font-family: "Rogerex";
+    font-size: 20px;
+  }
+  
+  .footerDescription {
+    font-family: "Inter";
+    opacity: .6;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .footerRightText {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    font-family: "Inter";
+    margin-bottom: 10px;
+    opacity: .6;
+    text-transform: uppercase;
+  }
+  
+  @media all and (max-width:1200px) {
+    .footerCallToAction {
+      border-radius: 0px;
+    }
+  
+    .footerContent {
+      width: 85%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: initial;
+      margin: 0;
+    }
+  
+    .headerContainer {
+      display: flex;
+      flex-direction: column;
+      /* display: none; */
+      min-height: 80vh;
+      padding: 40px 0;
+    }
+  
+    .headerLeft {
+      width: 100%;
+      justify-content: center;
+      min-height: 80vh;
+    }
+  
+    .image {
+      position: absolute;
+      bottom: -30%;
+      align-self: center;
+      justify-self: center;
+      margin: 0 auto;
+      left: 0%;
+      width: 70%;
+      display: none;
+    }
+  
+    .benefit {
+      flex-direction:column;
+      width: 100%;
+      align-items: flex-start;
+    }
+  
+    .benefitLeft {
+      width: 100%;
+    }
+  
+    .benefitLeftDescription {
+      width: 100%;
+    }
+  
+    .title {
+      width: 80%;
+    }
+  
+    .description {
+      width: 80%;
+    }
+  
+    .benefitImage {
+      /* width: 50%; */
+    }
+  
+    .buttons {
+      /*  */
+    }
+  
+    .iosDownloadButton {
+      /*  */
+    }
+  }
+  
+  @media all and (max-width:900px) {
+    .buttonText {
+      font-size: 15px;
+    }
+  
+    .benefitImage {
+      width: 50%;
+    }
+  
+    .footerTitle {
+      font-size: 32px;
+    }
+  
+    .footerContent {
+      width: 100%;
+      padding: 60px 40px;
+    }
+  
+    .downloadImage {
+      width: 30%;
+    }
+  
+    .benefitLeftTitle {
+      width: 100%;
+    }
+  
+    .benefitLeft {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .title {
+      width: 100%;
+      font-size: 40px;
+    }
+  
+    .description {
+      width: 100%;
+    }
+  }
+  
+  @media all and (max-width:500px) {
+    .header { 
+      padding: 0px 30px;
+    }
+  
+  .benefitsContainer {
+    padding: 20px 40px;
+  }
+  
+    .buttons {
+      flex-direction: column;
+    }
+  
+    .downloadImage {
+      width: 50%;
+    }
+  
+    .androidDownloadButton {
+      margin-left: 0px;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .iosDownloadButton {
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  
+    .benefitImage {
+      width: 100%;
+    }
+  
+    .benefitLeft {
+      padding-left: 0px;
+    }
+  }
