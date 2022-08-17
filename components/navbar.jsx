@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/Navbar.module.css";
@@ -6,7 +7,12 @@ export const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <Link href="/">
-        <img className={styles.logo} src="/rawWhite.png" />
+        <Image
+          width="80px"
+          height={"20%"}
+          className={styles.logo}
+          src="/rawWhite.png"
+        />
       </Link>
       <div className={styles.links}>
         <Link style={styles.linkText} href="/SupportedLocations">
