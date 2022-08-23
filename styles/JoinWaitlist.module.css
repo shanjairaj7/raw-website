@@ -1,0 +1,200 @@
+.waitlistContent {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.waitlistContainer {
+    max-width: 600px;
+    /* width: 100%; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 10px;
+}
+
+.waitlistContainerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.waitlistTitle {
+    font-size: 35px;
+    font-family: "Inter";
+    letter-spacing: -0.8px;
+}
+
+.waitlistDescription {
+    padding: 12px 0;
+    font-family: "Inter";
+    line-height: 1.7em;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: -0.2px;
+}
+
+.waitlistForm {
+    width: 90%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.104);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.inputContainer:nth-child(3) {
+    padding-bottom: 0px;
+}
+
+.inputLabel {
+    font-size: 14px;
+    font-family: "Inter";
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.input {
+    padding: 15px;
+    font-family: "Inter";
+    border: 1.5px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.026);
+}
+
+.input:focus {
+    border: 1.5px solid rgb(149, 149, 149);
+    outline: none;
+}
+
+.placeholder {
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+    padding-top: 5px;
+    line-height: 1.4em;
+    /* font-style: italic; */
+}
+
+.joinButton {
+    width: 100%;
+    background-color: black;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Inter";
+    letter-spacing: -0.1px;
+    margin-top: 25px;
+}
+
+.loadingJoinButton {
+    width: 100%;
+    background-color: black;
+    font-weight: 500;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Inter";
+    letter-spacing: -0.1px;
+    margin-top: 25px;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.errorMessage {
+    font-family: "Inter";
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0,0,0,0.7);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent {
+    z-index: 20;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    max-width: 470px;
+    position: relative;
+}
+
+.waitlistImage {
+    width: 12%;
+}
+
+.waitlistModalTitle {
+    font-size: 22px;
+    letter-spacing: -0.7px;
+    margin-top: 20px;
+}
+
+.waitlistModalDescription {
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.4em;
+    opacity: .7;
+    letter-spacing: -0.1px;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    cursor: pointer;
+}

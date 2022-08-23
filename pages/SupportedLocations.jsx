@@ -125,6 +125,7 @@ const SupportedLocations = () => {
         </div>
 
         {filteredCountries.length === 0 ? (
+          // eslint-disable-next-line react/no-unescaped-entities
           <p className={styles.emptySearch}>No countries for '{searchText}'</p>
         ) : (
           <div className={styles.locations}>
