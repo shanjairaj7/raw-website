@@ -346,3 +346,27 @@
       padding-left: 0px;
     }
   }
+
+
+  .privacy__links {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  /* .circle {
+    height: 15px;
+    width: 3px;
+    background-color: rgb(72, 72, 72);
+  } */
+  
+  .terms {
+    font-family: "Inter";
+    font-size: 14px;
+    margin-top: 14px;
+    color: rgb(72, 72, 72);
+    display: inline-block;
+    text-decoration: underline;
+    margin-right: 5px;
+  }
+  

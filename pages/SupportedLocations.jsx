@@ -299,6 +299,24 @@ const SupportedLocations = () => {
           <p className={styles.footerDescription}>
             Copyright 2022. All rights reserved
           </p>
+          <div className={styles.privacy__links}>
+            <a
+              href="https://www.privacypolicies.com/live/a12aac82-6d6f-4e51-a6f0-0a8510939e62"
+              target="_blank"
+              className={styles.terms}
+              rel="noreferrer"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://www.app-privacy-policy.com/live.php?token=nXyyUuGWpj2d8k2nmSF8ywsGt0HwFEjp"
+              target="_blank"
+              className={styles.terms}
+              rel="noreferrer"
+            >
+              Terms & Conditions
+            </a>
+          </div>
         </div>
 
         <div className={styles.footerRight}>

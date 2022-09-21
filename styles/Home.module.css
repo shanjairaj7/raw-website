@@ -90,6 +90,20 @@
   align-items: center;
   background-color: white;
   color: black;
+  position: relative;
+  justify-content: center;
+}
+
+.soon {
+  position: absolute;
+  top: -40%;
+  margin-left: 10px;
+  font-size: 13px;
+  font-family: "Inter";
+  color: white;
+  opacity: 1;
+  text-align: center;
+
 }
 
 .buttons {
@@ -101,6 +115,7 @@
   font-family: "Inter";
   font-weight: 600;
   margin-left: 10px;
+  font-size: 14px;
 }
 
 .supportedLocationsLink {
@@ -229,6 +244,15 @@ margin-right: 20px;
 cursor: pointer;
 }
 
+.googlePlayImage {
+  width: 22%;
+  margin-top: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+
 .footerContent {
   padding: 80px;
   width: 65%;
@@ -303,6 +327,28 @@ cursor: pointer;
   margin-bottom: 10px;
   opacity: .6;
   text-transform: uppercase;
+}
+
+.privacy__links {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* .circle {
+  height: 15px;
+  width: 3px;
+  background-color: rgb(72, 72, 72);
+} */
+
+.terms {
+  font-family: "Inter";
+  font-size: 14px;
+  margin-top: 14px;
+  color: rgb(72, 72, 72);
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 5px;
 }
 
 @media all and (max-width:1200px) {
@@ -397,8 +443,17 @@ cursor: pointer;
   }
 
   .downloadImage {
-    width: 30%;
+    width: 20%;
   }
+
+  .googlePlayImage {
+    width: 20%;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    opacity: .5;
+  }
+  
 
   .benefitLeftTitle {
     width: 100%;
@@ -436,6 +491,14 @@ cursor: pointer;
     width: 50%;
   }
 
+  .googlePlayImage {
+    width: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    opacity: .5;
+  }
+  
   .androidDownloadButton {
     margin-left: 0px;
     align-items: center;
@@ -456,3 +519,4 @@ cursor: pointer;
     padding-left: 0px;
   }
 }
+

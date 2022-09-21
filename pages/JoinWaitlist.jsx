@@ -176,6 +176,51 @@ const JoinWaitlist = () => {
           </form>
         </div>
       </div>
+
+      <div className={styles.footerContainer}>
+        <div className={styles.footerLeft}>
+          <img className={styles.logo} src="/rawblacktext.png" />
+          <p className={styles.footerDescription}>
+            Copyright 2022. All rights reserved
+          </p>
+          <div className={styles.privacy__links}>
+            <a
+              href="https://www.privacypolicies.com/live/a12aac82-6d6f-4e51-a6f0-0a8510939e62"
+              target="_blank"
+              className={styles.terms}
+              rel="noreferrer"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://www.app-privacy-policy.com/live.php?token=nXyyUuGWpj2d8k2nmSF8ywsGt0HwFEjp"
+              target="_blank"
+              className={styles.terms}
+              rel="noreferrer"
+            >
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.footerRight}>
+          <h1 className={styles.footerRightText}>Social Media</h1>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/getrawapp"
+          >
+            <img className={styles.socialMediaIcon} src="/twitter.jpeg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/raw_app/"
+          >
+            <img className={styles.socialMediaIcon} src="/instagramLogo.svg" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

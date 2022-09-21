@@ -32,7 +32,7 @@ export default function Home() {
                 <span className={styles.greenUnderline}>
                   Single Subscription
                 </span>{" "}
-                to access gyms around the World.
+                to access all Fitness centers anywhere you go!
               </h1>
               <p className={styles.description}>
                 Get access to gyms from anywhere around the world, Track your
@@ -41,7 +41,12 @@ export default function Home() {
               </p>
 
               <div className={styles.buttons}>
-                <button className={styles.iosDownloadButton}>
+                <a
+                  target="_blank"
+                  href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+                  className={styles.iosDownloadButton}
+                  rel="noreferrer"
+                >
                   <Image
                     className={styles.icon}
                     src="/appleIconWhite.png"
@@ -49,7 +54,7 @@ export default function Home() {
                     height={22}
                   />
                   <p className={styles.buttonText}>Download for iOS</p>
-                </button>
+                </a>
 
                 <button className={styles.androidDownloadButton}>
                   <Image
@@ -59,6 +64,7 @@ export default function Home() {
                     height={22}
                   />
                   <p className={styles.buttonText}>Download for Android</p>
+                  <p className={styles.soon}>Coming Soon!</p>
                 </button>
               </div>
 
@@ -87,7 +93,12 @@ export default function Home() {
               Browse gyms near your or any location around the world, based on
               your filters.
             </p>
-            <a className={styles.linkContainer} href="#">
+            <a
+              className={styles.linkContainer}
+              href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.linkContainerText}>Get the App ▶ </p>
               <img className={styles.rightIcon} src="/rightIcon.png" />
             </a>
@@ -106,7 +117,12 @@ export default function Home() {
               Get to know information about the gym before you go, to make sure
               you don't get any sudden suprises when you reach there!
             </p>
-            <a className={styles.linkContainer} href="#">
+            <a
+              className={styles.linkContainer}
+              href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.linkContainerText}>Get the App ▶ </p>
               <img className={styles.rightIcon} src="/rightIcon.png" />
             </a>
@@ -125,7 +141,12 @@ export default function Home() {
               Get information about your fitness journey through analytics to
               help you keep track and reach your fitness goals.
             </p>
-            <a className={styles.linkContainer} href="#">
+            <a
+              className={styles.linkContainer}
+              href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.linkContainerText}>Get the App ▶ </p>
 
               <img className={styles.rightIcon} src="/rightIcon.png" />
@@ -145,7 +166,12 @@ export default function Home() {
               Simply scan the QR Code at the gym to get access and to start your
               activity.
             </p>
-            <a className={styles.linkContainer} href="#">
+            <a
+              className={styles.linkContainer}
+              href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.linkContainerText}>Get the App ▶ </p>
               <img className={styles.rightIcon} src="/rightIcon.png" />
             </a>
@@ -166,9 +192,27 @@ export default function Home() {
             goals.
           </p>
 
+          {/* className={styles.linkContainer}
+              href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+              target="_blank"
+              rel="noreferrer" */}
+
           <div>
-            <img className={styles.downloadImage} src="/downloadAppStore.png" />
-            <img className={styles.downloadImage} src="/googlePlayStore.png" />
+            <a
+              href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.downloadImage}
+                src="/downloadAppStore.png"
+              />
+            </a>
+
+            <img
+              className={styles.googlePlayImage}
+              src="/googlePlayStore.png"
+            />
           </div>
         </div>
       </div>
@@ -179,6 +223,24 @@ export default function Home() {
           <p className={styles.footerDescription}>
             Copyright 2022. All rights reserved
           </p>
+          <div className={styles.privacy__links}>
+            <a
+              href="https://www.privacypolicies.com/live/a12aac82-6d6f-4e51-a6f0-0a8510939e62"
+              target="_blank"
+              className={styles.terms}
+              rel="noreferrer"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://www.app-privacy-policy.com/live.php?token=nXyyUuGWpj2d8k2nmSF8ywsGt0HwFEjp"
+              target="_blank"
+              className={styles.terms}
+              rel="noreferrer"
+            >
+              Terms & Conditions
+            </a>
+          </div>
         </div>
 
         <div className={styles.footerRight}>
