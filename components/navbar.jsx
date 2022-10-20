@@ -44,7 +44,7 @@ export const Navbar = () => {
           />
 
           <Link href="/">
-            <img className={styles.logo} src="/rawWhite.png" />
+            <img className={styles.logo} src="/rawblacktext.png" />
           </Link>
         </div>
 
@@ -54,13 +54,20 @@ export const Navbar = () => {
           </a>
         </Link>
       </div>
-      <div className={styles.links}>
+
+      <div className={styles.middleLinks}>
         <Link className={styles.linkText} href="/SupportedLocations">
-          <a className={styles.link}>Supported Locations</a>
+          <a className={styles.link}>Features</a>
         </Link>
         <Link className={styles.linkText} href="/ContactUs">
-          <a className={styles.link}>Contact Us</a>
+          <a className={styles.link}></a>
         </Link>
+        <Link className={styles.linkText} href="/ContactUs">
+          <a className={styles.link}>For Gyms</a>
+        </Link>
+      </div>
+
+      <div className={styles.links}>
         <Link href="/JoinWaitlist">
           <a href="#" className={styles.waitlistButtonNavbar}>
             <p className={styles.waitlistButtonText}>Join the Waitlist</p>

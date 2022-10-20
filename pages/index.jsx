@@ -27,12 +27,10 @@ export default function Home() {
         <main className={styles.header}>
           <div className={styles.headerContainer}>
             <div className={styles.headerLeft}>
+              <p className={styles.welcomeText}>Welcome to RAW</p>
               <h1 className={styles.title}>
-                Your{" "}
-                <span className={styles.greenUnderline}>
-                  Single Subscription
-                </span>{" "}
-                to access all Fitness centers anywhere you go!
+                Explore various workouts and take your fitness to the next
+                level! 🎯
               </h1>
               <p className={styles.description}>
                 Get access to gyms from anywhere around the world, Track your
@@ -67,15 +65,15 @@ export default function Home() {
                   <p className={styles.soon}>Coming Soon!</p>
                 </button>
               </div>
-
+              {/* 
               <Link href="/SupportedLocations">
                 <p className={styles.supportedLocationsLink}>
                   or check the supported locations
                 </p>
-              </Link>
+              </Link> */}
             </div>
 
-            <img className={styles.image} src="/rawAppScreens.png" />
+            <img className={styles.image} src="/appScreenshot.png" />
           </div>
         </main>
       </div>

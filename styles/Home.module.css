@@ -1,7 +1,7 @@
 .container {
   /* max-width: 1600px; */
   margin: 0 auto;
-  background-color: rgb(15, 15, 15);
+  background-color: white;
   /* background-image: linear-gradient(to right, rgb(19, 19, 19) , black); */
 }
 
@@ -20,9 +20,9 @@
 }
 
 .headerContainer {
-  color: white;
+  color: black;
   /* background-color: red; */
-  min-height: 103vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,18 +38,27 @@
 }
 
 .title {
-  font-family: "Inter" !important;
-  font-weight: 800;
-  letter-spacing: -0.9px;
-  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -0.7px;
+  font-size: 50px;
   width: 100%;
   line-height: 1.2em;
-  font-family: "Inter";
+  font-family: "Plus Jakarta Sans";
+  /* font-family: "Inter"; */
   /* font-family: "Inter"; */
 }
 
+.welcomeText {
+  margin-bottom: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  opacity: .8;
+  font-weight: 500;
+}
+
 .greenUnderline {
-  border-bottom: 5px solid #198860;
+  /* border-bottom: 5px solid #198860; */
   /* font-family: "Rogerex" !important; */
   /* border-bottom-style:dashed; */
 }
@@ -58,10 +67,10 @@
   padding: 20px 0;
   font-size: 18px;
   width: 90%;
-  line-height: 1.8em;
-  opacity: .6;
-  font-family: "Inter";
-  /* font-family: "Plus Jakarta Sans"; */
+  line-height: 1.9em;
+  /* font-family: "Inter"; */
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
 }
 
 .buttons {
@@ -72,26 +81,32 @@
 .iosDownloadButton {
   padding: 17px 30px;
   border: none;
-  border-radius: 5px;
-  background-color: #198860;
+  border-radius: 10px;
+  background-color: #116144;
   cursor: pointer;
   display: flex;
   align-items: center;
   color: white;
+
 }
 
 .androidDownloadButton {
-  padding: 17px 30px;
+  padding: 17px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: white;
+  border: 2px solid black;
   color: black;
+  background: transparent;
   position: relative;
   justify-content: center;
+}
+
+.androidDownloadButton > p {
+  /* color: #116144; */
 }
 
 .soon {
@@ -111,11 +126,11 @@
 }
 
 .buttonText {
-  /* font-family: "Plus Jakarta Sans"; */
-  font-family: "Inter";
+  font-family: "Plus Jakarta Sans";
+  /* font-family: "Inter"; */
   font-weight: 600;
-  margin-left: 10px;
-  font-size: 14px;
+  margin-left: 20px;
+  font-size: 13px;
 }
 
 .supportedLocationsLink {
@@ -142,9 +157,9 @@
 
 .image {
   /* margin: auto; */
-  width: 50%;
-  position: absolute;
-  right: 0%;
+  width: 30%;
+  /* position: absolute; */
+  /* right: 0%; */
   /* margin-bottom: 70px; */
   z-index: 1;
   /* height: 100%; */
