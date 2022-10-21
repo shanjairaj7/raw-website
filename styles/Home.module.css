@@ -10,9 +10,17 @@
   max-width: 1600px;
   margin: 0 auto;
   /* min-height: 80vh; */
-  padding: 0px 70px;
+  padding: 0px 100px;
+  width: 95%;
   position: relative;
   overflow: hidden;
+  background-color: rgb(246, 246, 246);
+  /* margin-top: 20px; */
+}
+
+.benefitsHeader {
+  text-align: center;
+  margin-top: 100px;
 }
 
 .logo {
@@ -25,7 +33,7 @@
   min-height: 70vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   /* background-color: red; */
 }
@@ -38,11 +46,11 @@
 }
 
 .title {
-  font-weight: 900;
-  letter-spacing: -0.7px;
-  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  font-size: 55px;
   width: 100%;
-  line-height: 1.2em;
+  line-height: 1.3em;
   font-family: "Plus Jakarta Sans";
   /* font-family: "Inter"; */
   /* font-family: "Inter"; */
@@ -65,9 +73,9 @@
 
 .description {
   padding: 20px 0;
-  font-size: 18px;
+  font-size: 16px;
   width: 90%;
-  line-height: 1.9em;
+  line-height: 2em;
   /* font-family: "Inter"; */
   font-family: "Plus Jakarta Sans";
   font-weight: 500;
@@ -79,10 +87,10 @@
 }
 
 .iosDownloadButton {
-  padding: 17px 30px;
+  padding: 17px 35px;
   border: none;
-  border-radius: 10px;
-  background-color: #116144;
+  border-radius: 5px;
+  background-color: #0f6143;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -93,7 +101,7 @@
 .androidDownloadButton {
   padding: 17px 25px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 10px;
   cursor: pointer;
   display: flex;
@@ -128,7 +136,7 @@
 .buttonText {
   font-family: "Plus Jakarta Sans";
   /* font-family: "Inter"; */
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 20px;
   font-size: 13px;
 }
@@ -170,17 +178,32 @@
   color: black;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 20px 70px;
+  padding: 20px 0px;
+  padding-top: 0px;
+}
+
+.benefit:nth-child(2) {
+  margin-top: 70px;
 }
 
 .benefit {
-  /* height: 250px; */
-  width: 80%;
-  margin: 60px auto 60px auto; 
-  align-items: center;
-  /* justify-content: center; */
+ width: 80%;
+ padding: 50px 0;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+.benefit:nth-child(odd) {
+  border-bottom: 1px solid rgb(246, 246, 246);
+  border-top: 1px solid rgb(246, 246, 246);
+
+}
+
+.benefit:nth-child(5) {
+  border-bottom: 1px solid white;
 }
 
 .linkContainer {
@@ -205,12 +228,36 @@
 
 .benefitLeftTitle {
   /*  */
-  font-size: 35px;
-  font-family: "Inter";
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 1.3em;
-  width: 80%;
+  font-size: 40px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 1.4em;
+  width: 90%;
+}
+
+.headerLine {
+  width: 50px;
+  height: 1px;
+  background-color: rgb(218, 218, 218);
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.downloadIcon {
+  color: white;
+  font-size: 20px;
+}
+
+.downloadButton {
+  background-color: #0f6143;
+  padding: 7px 9px;
+  border-radius: 50px;
+  margin-right: 10px;
 }
 
 .benefitLeft {
@@ -218,14 +265,18 @@
   width: 50%;
 }
 
+.benefitLeft:nth-child(odd) {
+  padding-right: 40px;
+}
+
 .benefitLeftDescription {
   padding-top: 15px;
   font-size: 17px;
   /* width: 80%; */
-  line-height: 1.6em;
+  line-height: 2em;
   opacity: .8;
-  font-family: "Inter";
-  letter-spacing: -0.3px;
+  font-family: "Plus Jakarta Sans";
+  letter-spacing: 0.2px;
 }
 
 .benefitImage {
@@ -233,72 +284,103 @@
 }
 
 .label {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   font-family: "Inter";
-  opacity: .5;
-  border-bottom: 1px solid grey;
-  width: 12px;
+  color: rgb(104, 104, 104);
+  /* background-color: rgb(226, 226, 226); */
+  display: inline-block;
+  /* padding: 7px 14px; */
+  border-radius: 50px;
   font-size: 18px;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  /* display: none; */
+  /* padding-bottom: 5px; */
+}
+
+.footerLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: .8;
 }
 
 .footerCallToAction {
-  max-width: 1300px;
+  /* max-width: 1300px; */
   margin: 0 auto;
   position: relative;
   color: white;
-  background-color: rgb(22, 22, 22);
-  border-radius: 30px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  /* margin-bottom: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  margin: 100px auto;
+  margin-bottom: 200px;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  /* min-height: 80vh; */
+  width: 95%;
+  position: relative;
+  overflow: hidden;
   margin-bottom: 100px;
 }
 
 .downloadImage {
-  width: 22%;
-  margin-top: 20px;
+  width: 30%;
+  margin-top: 35px;
 margin-right: 20px;
 cursor: pointer;
 }
 
 .googlePlayImage {
-  width: 22%;
-  margin-top: 20px;
+  width: 30%;
+  margin-top: 35px;
   margin-right: 20px;
   cursor: pointer;
-  opacity: .5;
+  /* opacity: .5; */
 }
 
 
 .footerContent {
   padding: 80px;
-  width: 65%;
-  display: flex;
+  width: 50%;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
-  text-align: center; 
-  margin: 0 auto;
+  /* text-align: center;  */
+  /* margin: 0 auto; */
 }
 
 .footerContentDescription {
   padding-top: 20px;
-  line-height: 1.6em;
-  font-size: 18px;
+  line-height: 1.8em;
+  font-size: 17px;
   opacity: .8;
+  letter-spacing: 0.3px;
 }
 
 .footerTitle {
-  font-family: "Inter";
-  font-size: 40px;
-  letter-spacing: -0.5px;
-  font-weight: 700;
-  width: 90%;
+  font-family: "Plus Jakarta Sans";
+  font-size: 50px;
+  letter-spacing: -0.2px;
+  font-weight: 800;
+  width: 100%;
   line-height: 1.2em;
+  margin-top: 12px;
+  margin-bottom: 2px;
 }
 
 .footerImage {
-  width: 100%;
-  border-radius: 70px;
+  width: 27%;
+  /* border-radius: 70px; */
 }
 
 .footerContainer {

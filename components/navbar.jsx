@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
+import { HiArrowRight } from "react-icons/hi";
 
 export const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -55,22 +56,23 @@ export const Navbar = () => {
         </Link>
       </div>
 
-      <div className={styles.middleLinks}>
-        <Link className={styles.linkText} href="/SupportedLocations">
-          <a className={styles.link}>Features</a>
-        </Link>
-        <Link className={styles.linkText} href="/ContactUs">
-          <a className={styles.link}></a>
-        </Link>
-        <Link className={styles.linkText} href="/ContactUs">
-          <a className={styles.link}>For Gyms</a>
-        </Link>
-      </div>
-
       <div className={styles.links}>
+        <div className={styles.middleLinks}>
+          <Link className={styles.linkText} href="/SupportedLocations">
+            <a className={styles.link}>Features</a>
+          </Link>
+          <Link className={styles.linkText} href="/ContactUs">
+            <a className={styles.link}></a>
+          </Link>
+          {/* <Link className={styles.linkText} href="/ContactUs">
+            <a className={styles.link}>Supported Locations</a>
+          </Link> */}
+        </div>
+
         <Link href="/JoinWaitlist">
           <a href="#" className={styles.waitlistButtonNavbar}>
             <p className={styles.waitlistButtonText}>Join the Waitlist</p>
+            <HiArrowRight className={styles.waitlistIcon} color="black" />
           </a>
         </Link>
       </div>
