@@ -4,6 +4,8 @@ import React from "react";
 import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import { HiArrowRight } from "react-icons/hi";
+import { BiMenu } from "react-icons/bi";
+import { Link as ScrollLink } from "react-scroll";
 
 export const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -18,12 +20,19 @@ export const Navbar = () => {
             onClick={() => setShowDropdown(false)}
           />
 
-          <Link className={styles.dropdownLink} href="/SupportedLocations">
-            <div className={styles.dropdownLinkContainer}>
-              <a className={styles.dropdownLinkText}>Supported Locations</a>
-              <img className={styles.rightArrow} src="/rightArrow.png" />
-            </div>
-          </Link>
+          {/* <ScrollLink
+            className={styles.dropdownLink}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            to="features"
+          > */}
+          <div className={styles.dropdownLinkContainer}>
+            <a className={styles.dropdownLinkText}>Features</a>
+            <img className={styles.rightArrow} src="/rightArrow.png" />
+          </div>
+          {/* </ScrollLink> */}
 
           <Link className={styles.dropdownLink} href="/ContactUs">
             <div className={styles.dropdownLinkContainer}>
@@ -36,13 +45,19 @@ export const Navbar = () => {
 
       <div className={styles.navbarLeft}>
         <div className={styles.navbarLeftMain}>
-          <img
+          <BiMenu
+            className={styles.menuIcon}
+            color="black"
+            onClick={() => setShowDropdown(true)}
+            fontSize={30}
+          />
+          {/* <img
             className={styles.menuIcon}
             width="30px"
             height="30px"
             src="/menuIconWhite.png"
             onClick={() => setShowDropdown(true)}
-          />
+          /> */}
 
           <Link href="/">
             <img className={styles.logo} src="/rawblacktext.png" />
@@ -58,15 +73,23 @@ export const Navbar = () => {
 
       <div className={styles.links}>
         <div className={styles.middleLinks}>
-          <Link className={styles.linkText} href="/SupportedLocations">
-            <a className={styles.link}>Features</a>
-          </Link>
-          <Link className={styles.linkText} href="/ContactUs">
-            <a className={styles.link}></a>
-          </Link>
+          <ScrollLink
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            to="features"
+            className={styles.link}
+            href="/SupportedLocations"
+          >
+            Features
+          </ScrollLink>
           {/* <Link className={styles.linkText} href="/ContactUs">
-            <a className={styles.link}>Supported Locations</a>
+            <a className={styles.link}></a>
           </Link> */}
+          <Link className={styles.linkText} href="/ContactUs">
+            <a className={styles.link}>Contact us</a>
+          </Link>
         </div>
 
         <Link href="/JoinWaitlist">

@@ -30,7 +30,7 @@ export default function Home() {
             <div className={styles.headerLeft}>
               <p className={styles.welcomeText}>WELCOME TO RAW</p>
               <h1 className={styles.title}>
-                Explore multiple workouts & expand your fitness.
+                Explore multiple workouts & improve your fitness.
               </h1>
               <p className={styles.description}>
                 Get access to gyms from anywhere around the world, Track your
@@ -38,32 +38,38 @@ export default function Home() {
                 a single Subscription.
               </p>
 
-              <div className={styles.buttons}>
+              <div className={styles.headerButtons}>
                 <a
                   target="_blank"
                   href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
-                  className={styles.iosDownloadButton}
                   rel="noreferrer"
+                  className={styles.iosDownloadButton}
                 >
                   <Image
                     className={styles.icon}
                     src="/appleIconWhite.png"
-                    width={22}
-                    height={22}
+                    width={26}
+                    height={26}
                   />
                   <p className={styles.buttonText}>Download for iOS</p>
                 </a>
 
-                <button className={styles.androidDownloadButton}>
-                  <Image
-                    className={styles.icon}
-                    src="/androidIcon.png"
-                    width={22}
-                    height={22}
-                  />
-                  <p className={styles.buttonText}>Download for Android</p>
-                  {/* <p className={styles.soon}>Coming Soon!</p> */}
-                </button>
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+                  rel="noreferrer"
+                >
+                  <button className={styles.androidDownloadButton}>
+                    <Image
+                      className={styles.icon}
+                      src="/androidIcon.png"
+                      width={24}
+                      height={24}
+                    />
+                    <p className={styles.buttonText}>Download for Android</p>
+                    {/* <p className={styles.soon}>Coming Soon!</p> */}
+                  </button>
+                </a>
               </div>
               {/* 
               <Link href="/SupportedLocations">
@@ -78,7 +84,7 @@ export default function Home() {
         </main>
       </div>
 
-      <div className={styles.benefitsContainer}>
+      <div id="features" className={styles.benefitsContainer}>
         <div className={styles.benefitsHeader}>
           <h1>Features</h1>
           <div className={styles.headerLine}></div>
@@ -107,12 +113,24 @@ export default function Home() {
             </a> */}
 
             <div className={styles.buttons}>
-              <div className={styles.downloadButton}>
-                <AiFillApple className={styles.downloadIcon} />
-              </div>
-              <div className={styles.downloadButton}>
-                <AiFillAndroid className={styles.downloadIcon} />
-              </div>
+              <a
+                target="_blank"
+                href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillApple className={styles.downloadIcon} />
+                </div>
+              </a>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillAndroid className={styles.downloadIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -128,12 +146,24 @@ export default function Home() {
               you don't get any sudden suprises when you reach there!
             </p>
             <div className={styles.buttons}>
-              <div className={styles.downloadButton}>
-                <AiFillApple className={styles.downloadIcon} />
-              </div>
-              <div className={styles.downloadButton}>
-                <AiFillAndroid className={styles.downloadIcon} />
-              </div>
+              <a
+                target="_blank"
+                href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillApple className={styles.downloadIcon} />
+                </div>
+              </a>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillAndroid className={styles.downloadIcon} />
+                </div>
+              </a>
             </div>
           </div>
 
@@ -153,12 +183,14 @@ export default function Home() {
               help you keep track and reach your fitness goals.
             </p>
             <div className={styles.buttons}>
-              <div className={styles.downloadButton}>
+              <a>
+              <div  className={styles.downloadButton}>
                 <AiFillApple className={styles.downloadIcon} />
-              </div>
+              </div></a>
+              <a>
               <div className={styles.downloadButton}>
                 <AiFillAndroid className={styles.downloadIcon} />
-              </div>
+              </div></a>
             </div>
           </div>
         </div> */}
@@ -176,17 +208,67 @@ export default function Home() {
               book both free and paid classes easily through the app.
             </p>
             <div className={styles.buttons}>
-              <div className={styles.downloadButton}>
-                <AiFillApple className={styles.downloadIcon} />
-              </div>
-              <div className={styles.downloadButton}>
-                <AiFillAndroid className={styles.downloadIcon} />
-              </div>
+              <a
+                target="_blank"
+                href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillApple className={styles.downloadIcon} />
+                </div>
+              </a>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillAndroid className={styles.downloadIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
         <div className={styles.benefit}>
+          <div className={styles.benefitLeft}>
+            <p className={styles.label}>TRACK</p>
+            <h1 className={styles.benefitLeftTitle}>
+              Track, Manage your exercises and workouts easily!
+            </h1>
+            <p className={styles.benefitLeftDescription}>
+              Create multiple lists with what workouts and exercises you will be
+              doing and track them through the app. Also take breaks after or
+              during your current workout.
+            </p>
+            <div className={styles.buttons}>
+              <a
+                target="_blank"
+                href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillApple className={styles.downloadIcon} />
+                </div>
+              </a>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillAndroid className={styles.downloadIcon} />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <img className={styles.benefitImage} src="/appScreenshot5.png" />
+        </div>
+
+        <div className={styles.benefit}>
+          <img className={styles.benefitImage} src="/demo3.png" />
+
           <div className={styles.benefitLeft}>
             <p className={styles.label}>ACCESS</p>
             <h1 className={styles.benefitLeftTitle}>
@@ -197,16 +279,26 @@ export default function Home() {
               activity.
             </p>
             <div className={styles.buttons}>
-              <div className={styles.downloadButton}>
-                <AiFillApple className={styles.downloadIcon} />
-              </div>
-              <div className={styles.downloadButton}>
-                <AiFillAndroid className={styles.downloadIcon} />
-              </div>
+              <a
+                target="_blank"
+                href="https://apps.apple.com/app/raw-fitness-for-you/id1642336260?platform=iphone"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillApple className={styles.downloadIcon} />
+                </div>
+              </a>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+                rel="noreferrer"
+              >
+                <div className={styles.downloadButton}>
+                  <AiFillAndroid className={styles.downloadIcon} />
+                </div>
+              </a>
             </div>
           </div>
-
-          <img className={styles.benefitImage} src="/demo3.png" />
         </div>
       </div>
 
@@ -240,10 +332,16 @@ export default function Home() {
               />
             </a>
 
-            <img
-              className={styles.googlePlayImage}
-              src="/googlePlayStore.png"
-            />
+            <a
+              href="https://play.google.com/store/apps/details?id=com.gymapp.gym"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.googlePlayImage}
+                src="/googlePlayStore.png"
+              />
+            </a>
           </div>
         </div>
       </div>
