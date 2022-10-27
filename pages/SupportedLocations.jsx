@@ -92,19 +92,12 @@ const SupportedLocations = () => {
   return (
     <div>
       <Head>
-        <title>
-          RAW - Single Subscription to access gyms Worldwide | Supported
-          Locations
-        </title>
+        <title>RAW -Supported Locations</title>
         <meta
           name="description"
-          content="Check out the supported locations where RAW is available with Gym Locations"
+          content="Check the locations that RAW is currently launched in, RAW is currently launched in Dubai and we will be launching in many places very soon."
         />
         <link rel="icon" href="/rawLogoBlack.png" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <Navbar />
@@ -326,14 +319,22 @@ const SupportedLocations = () => {
             target="_blank"
             href="https://twitter.com/getrawapp"
           >
-            <img className={styles.socialMediaIcon} src="/twitter.jpeg" />
+            <img
+              alt="rawapp twitter"
+              className={styles.socialMediaIcon}
+              src="/twitter.png"
+            />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.instagram.com/raw_app/"
           >
-            <img className={styles.socialMediaIcon} src="/instagramLogo.svg" />
+            <img
+              alt="rawapp instagram"
+              className={styles.socialMediaIcon}
+              src="/instagramLogo.png"
+            />
           </a>
         </div>
       </div>

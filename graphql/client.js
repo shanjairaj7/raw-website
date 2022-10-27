@@ -5,7 +5,7 @@ import { setContext } from "apollo-link-context";
 const cache = new InMemoryCache();
 
 const httpLink = new HttpLink({
-  uri: "https://gym-graphql.herokuapp.com/graphql",
+  uri: "https://raw-graphql.herokuapp.com/graphql",
 });
 
 const authlink = setContext(async (req, { headers }) => {

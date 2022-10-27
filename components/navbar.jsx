@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { useState } from "react";
-import styles from "../styles/Navbar.module.css";
-import { HiArrowRight } from "react-icons/hi";
+import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
+import { HiArrowRight } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll";
+import styles from "../styles/Navbar.module.css";
 
 export const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -60,7 +59,13 @@ export const Navbar = () => {
           /> */}
 
           <Link href="/">
-            <img className={styles.logo} src="/rawblacktext.png" />
+            <Image
+              width={80}
+              height={20}
+              className={styles.logo}
+              src="/rawblacktext.png"
+              alt="rawapp logo"
+            />
           </Link>
         </div>
 
@@ -73,17 +78,19 @@ export const Navbar = () => {
 
       <div className={styles.links}>
         <div className={styles.middleLinks}>
-          <ScrollLink
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            to="features"
-            className={styles.link}
-            href="/SupportedLocations"
-          >
-            Features
-          </ScrollLink>
+          <Link href="/">
+            <ScrollLink
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              to="features"
+              className={styles.link}
+              href="/"
+            >
+              Features
+            </ScrollLink>
+          </Link>
           {/* <Link className={styles.linkText} href="/ContactUs">
             <a className={styles.link}></a>
           </Link> */}

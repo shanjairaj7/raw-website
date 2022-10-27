@@ -54,18 +54,12 @@ const ContactUs = () => {
   return (
     <div>
       <Head>
-        <title>
-          RAW - Single Subscription to access gyms Worldwide | Contact Us
-        </title>
+        <title>RAW - Contact Us</title>
         <meta
           name="description"
           content="Contact RAW for any questions, inquiries or any recommendations that you have to make the product better."
         />
         <link rel="icon" href="/rawLogoBlack.png" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <Navbar />
@@ -171,14 +165,22 @@ const ContactUs = () => {
             target="_blank"
             href="https://twitter.com/getrawapp"
           >
-            <img className={styles.socialMediaIcon} src="/twitter.jpeg" />
+            <img
+              alt="rawapp twitter"
+              className={styles.socialMediaIcon}
+              src="/twitter.png"
+            />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.instagram.com/raw_app/"
           >
-            <img className={styles.socialMediaIcon} src="/instagramLogo.svg" />
+            <img
+              alt="rawapp instagram"
+              className={styles.socialMediaIcon}
+              src="/instagramLogo.png"
+            />
           </a>
         </div>
       </div>
