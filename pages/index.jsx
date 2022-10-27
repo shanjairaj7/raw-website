@@ -41,8 +41,8 @@ export default function Home() {
                   <Image
                     className={styles.icon}
                     src="/appleIconWhite.png"
-                    width={24}
-                    height={26}
+                    width={20}
+                    height={23}
                     alt="download rawapp apple"
                   />
                   <p className={styles.buttonText}>Download for iOS</p>
