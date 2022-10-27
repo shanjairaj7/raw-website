@@ -27,10 +27,21 @@ export const Navbar = () => {
             duration={500}
             to="features"
           > */}
-          <div className={styles.dropdownLinkContainer}>
+
+          <ScrollLink
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            to="features"
+            className={styles.dropdownLinkContainer}
+            onClick={() => setShowDropdown(false)}
+            href="/"
+          >
             <a className={styles.dropdownLinkText}>Features</a>
             <img className={styles.rightArrow} src="/rightArrow.png" />
-          </div>
+          </ScrollLink>
+
           {/* </ScrollLink> */}
 
           <Link className={styles.dropdownLink} href="/ContactUs">
@@ -68,10 +79,17 @@ export const Navbar = () => {
             />
           </Link>
         </div>
+        {/* 
+        <Link href="/JoinWaitlist">
+          <a href="#" className={styles.waitlistButtonNavbar}>
+            <p className={styles.waitlistButtonText}>Join the Waitlist</p>
+          </a>
+        </Link> */}
 
         <Link href="/JoinWaitlist">
           <a href="#" className={styles.waitlistButton}>
             <p className={styles.waitlistButtonText}>Join the Waitlist</p>
+            <HiArrowRight className={styles.waitlistIcon} color="black" />
           </a>
         </Link>
       </div>

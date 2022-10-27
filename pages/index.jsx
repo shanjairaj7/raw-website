@@ -347,13 +347,14 @@ export default function Home() {
       {/* <p className={styles.moreToComeText}>and more to come...</p> */}
 
       <div className={styles.footerCallToAction}>
-        <Image
-          width={350}
-          height={650}
-          className={styles.footerImage}
-          src="/appScreenshot.png"
-          alt="download raw app apple android"
-        />
+        <div className={styles.footerImage}>
+          <Image
+            width={350}
+            height={650}
+            src="/appScreenshot.png"
+            alt="download raw app apple android"
+          />
+        </div>
 
         <div className={styles.footerContent}>
           <p className={styles.footerLabel}>GET STARTED</p>

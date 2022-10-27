@@ -80,6 +80,7 @@
 
 .waitlistButtonText {
     margin-right: 10px;
+    font-weight: 600;
 }
 
 .waitlistIcon {
@@ -150,7 +151,6 @@
 }
 
     .logo {
-        margin-left: 20px !important;
         align-self: center !important;
         justify-self: center;
     }
@@ -158,6 +158,8 @@
     .navbarLeftMain {
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        width: 140px;
     }
 
     .waitlistButton {
